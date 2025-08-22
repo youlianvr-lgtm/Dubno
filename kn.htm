@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Памятник "Скорбящая мать"</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="content">
+    <h2>Памятник "Скорбящая мать" в деревне Княжеводцы</h2>
+    
+    <p><b>Памятник "Скорбящая мать"</b> установлен в 1958 году на месте массового расстрела жителей деревни Княжеводцы, уничтоженной фашистами 23 июля 1943 года. Скульптура изображает женщину с поникшим лицом, олицетворяющую горе всех матерей, потерявших своих близких во время войны.</p>
+
+    <div class="image-container">
+        <img src="big.jpg" alt="Памятник Скорбящая мать">
+    </div>
+
+    <h1>Исторический контекст</h1>
+    <p>23 июля 1943 года немецкие каратели окружили деревню, согнали 970 жителей (включая стариков, женщин и детей) и расстреляли их. Деревня была полностью сожжена. Выжить удалось лишь немногим, включая Веру Бышкало и Григория Жука, которые позже делились воспоминаниями об этих событиях.</p>
+
+    <div class="image-container">
+        <img src="images.jpg" alt="Историческое фото Княжеводцев">
+    </div>
+
+    <h1>Архитектурные особенности</h1>
+    <p><b>Местоположение</b>: правый берег Немана, в 2 км от деревни</p>
+    <p><b>Дата установки</b>: 1958 год</p>
+    <p><b>Стиль</b>: классический, передающий скорбь и мужество</p>
+    <p><b>Реконструкция</b>: в 2018 году обновлена скульптура и благоустроена территория</p>
+
+    <h1>Современное значение</h1>
+    <p>Памятник стал символом памяти о жертвах фашизма и местом ежегодных митингов-реквиемов. 23 июля, в день трагедии, здесь собираются жители района, представители власти, духовенства и молодёжи.</p>
+
+    <div class="image-container">
+        <img src="big0.jpg" alt="Митинг у памятника">
+    </div>
+
+    <h1>Дополнительная информация</h1>
+    <p>- Княжеводцы называют "сестрой Хатыни" из-за схожей судьбы</p>
+    <p>- В местной школе создан музей с архивными фотографиями</p>
+    <p>- На памятнике высечена цифра 970 — количество погибших</p>
+    <p>Памятник "Скорбящая мать" — не просто мемориал, а напоминание о страшных событиях войны, которые нельзя забывать.</p>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div class="button-container">
+        <a href="Homepage.htm" class="button">Домой</a>
+        <a href="https://maps.app.goo.gl/RM2deTzQEBqWFbju6" class="button" target="_blank">Координаты</a>
+    </div>
+</div>
+
+<script>
+var modal = document.getElementById("imageModal");
+var modalImg = document.getElementById("modalImage");
+var images = document.querySelectorAll('.image-container img');
+
+images.forEach(function(img) {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+    }
+});
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

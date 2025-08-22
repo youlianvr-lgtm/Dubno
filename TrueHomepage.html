@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать в Дубненщину</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Times, serif;
+            color: white;
+        }
+        .hero {
+            background-image: url("dubno_art.png"); /* замените на подходящее фото */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        .hero a {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4a6ea9;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #3a5a8a;
+            transition: all 0.3s;
+        }
+        .hero a:hover {
+            background-color: #3a5a8a;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Добро пожаловать в Дубненщину</h1>
+            <p>Земля, где история встречается с современностью, где память и красота природы соединяются в единую гармонию.</p>
+            <a href="Homepage.htm">Перейти к достопримечательностям</a>
+        </div>
+    </section>
+</body>
+</html>
